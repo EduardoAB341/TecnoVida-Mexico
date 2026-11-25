@@ -1,0 +1,73 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 400">
+
+    <defs>
+        <linearGradient id="fondo" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#173b60"/>
+            <stop offset="100%" stop-color="#101d35"/>
+        </linearGradient>
+
+        <linearGradient id="luz" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#36d6c3"/>
+            <stop offset="100%" stop-color="#8875f5"/>
+        </linearGradient>
+
+        <filter id="brillo">
+            <feGaussianBlur stdDeviation="5"/>
+        </filter>
+    </defs>
+
+    <rect width="500" height="400" rx="25" fill="url(#fondo)"/>
+
+    <g opacity=".15" stroke="#36d6c3" stroke-width="1">
+        <path d="M0 50 H500 M0 100 H500 M0 150 H500 M0 200 H500 M0 250 H500 M0 300 H500 M0 350 H500"/>
+        <path d="M50 0 V400 M100 0 V400 M150 0 V400 M200 0 V400 M250 0 V400 M300 0 V400 M350 0 V400 M400 0 V400 M450 0 V400"/>
+    </g>
+
+    <g fill="none" stroke="url(#luz)" stroke-width="3">
+        <path d="M250 200 L100 85 L50 85"/>
+        <path d="M250 200 L400 85 L450 85"/>
+        <path d="M250 200 L100 315 L50 315"/>
+        <path d="M250 200 L400 315 L450 315"/>
+        <path d="M250 200 L250 45"/>
+        <path d="M250 200 L250 355"/>
+    </g>
+
+    <g fill="#36d6c3" filter="url(#brillo)" opacity=".7">
+        <circle cx="250" cy="200" r="65"/>
+        <circle cx="100" cy="85" r="12"/>
+        <circle cx="400" cy="85" r="12"/>
+        <circle cx="100" cy="315" r="12"/>
+        <circle cx="400" cy="315" r="12"/>
+    </g>
+
+    <circle cx="250" cy="200" r="62"
+            fill="#142c4a" stroke="url(#luz)" stroke-width="4"/>
+
+    <circle cx="250" cy="200" r="48"
+            fill="none" stroke="#36d6c3"
+            stroke-width="1" stroke-dasharray="5 7"/>
+
+    <g fill="none" stroke="#36d6c3" stroke-width="5"
+       stroke-linecap="round">
+        <path d="M228 185 L228 215 L250 215 L250 185"/>
+        <path d="M250 185 L272 185 L272 215"/>
+    </g>
+
+    <g fill="#36d6c3">
+        <circle cx="50" cy="85" r="7"/>
+        <circle cx="450" cy="85" r="7"/>
+        <circle cx="50" cy="315" r="7"/>
+        <circle cx="450" cy="315" r="7"/>
+        <circle cx="250" cy="45" r="7"/>
+        <circle cx="250" cy="355" r="7"/>
+    </g>
+
+    <g fill="#ffffff" font-family="Arial"
+       font-size="13" text-anchor="middle">
+        <text x="250" y="27">INTELIGENCIA</text>
+        <text x="250" y="385">TECNOLOGÍA CON PROPÓSITO</text>
+    </g>
+
+</svg>

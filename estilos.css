@@ -1,0 +1,537 @@
+
+/* ==================================
+   TECNOVIDA MEXICO
+   DISEÑO GENERAL
+================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #243449;
+    background: #f7f9fc;
+    line-height: 1.7;
+}
+
+:root {
+    --azul: #101d35;
+    --azul-claro: #19375b;
+    --turquesa: #36d6c3;
+    --violeta: #8875f5;
+    --gris: #68778b;
+    --blanco: #ffffff;
+}
+
+/* ==================================
+   MENU DE NAVEGACION
+================================== */
+
+header {
+    background: var(--azul);
+    padding: 18px 7%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: var(--turquesa);
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.menu ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.menu ul a:hover {
+    color: var(--turquesa);
+}
+
+/* ==================================
+   PORTADA PRINCIPAL
+================================== */
+
+.portada {
+    min-height: 520px;
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background:
+        radial-gradient(circle at 85% 30%, #244b70 0%, transparent 35%),
+        linear-gradient(120deg, #101d35, #162d4a);
+    color: white;
+    overflow: hidden;
+}
+
+.portada-texto {
+    max-width: 590px;
+}
+
+.etiqueta {
+    color: #12a99d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.portada .etiqueta {
+    color: var(--turquesa);
+}
+
+.portada h1 {
+    font-size: 43px;
+    line-height: 1.2;
+    margin: 22px 0;
+}
+
+.portada p {
+    color: #d1dbea;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.imagen-portada {
+    width: 43%;
+    max-width: 470px;
+}
+
+.imagen-portada img {
+    display: block;
+    width: 100%;
+    filter: drop-shadow(0 15px 35px rgba(54, 214, 195, 0.18));
+}
+
+.boton {
+    display: inline-block;
+    background: var(--turquesa);
+    color: #101d35;
+    padding: 13px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* ==================================
+   INTRODUCCION
+================================== */
+
+.introduccion {
+    text-align: center;
+    padding: 75px 15%;
+    background: white;
+}
+
+.introduccion h2 {
+    font-size: 30px;
+    color: var(--azul);
+    margin: 12px 0;
+}
+
+.introduccion p {
+    color: var(--gris);
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ==================================
+   SECCIONES GENERALES
+================================== */
+
+.seccion {
+    padding: 75px 8%;
+}
+
+.seccion h2 {
+    color: var(--azul);
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.descripcion {
+    color: var(--gris);
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+/* ==================================
+   TARJETAS
+================================== */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin: 35px 0;
+}
+
+.tarjeta {
+    background: white;
+    padding: 27px;
+    border: 1px solid #e3eaf1;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(16, 29, 53, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(16, 29, 53, 0.10);
+}
+
+.icono {
+    font-size: 35px;
+    color: #12a99d;
+    margin-bottom: 12px;
+}
+
+.tarjeta h3 {
+    color: var(--azul);
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    color: var(--gris);
+    font-size: 14px;
+}
+
+/* ==================================
+   LISTA DE RECOMENDACIONES
+================================== */
+
+.recomendacion {
+    background: #eaf7f6;
+    border-left: 4px solid var(--turquesa);
+    padding: 28px;
+    border-radius: 7px;
+}
+
+.recomendacion h3 {
+    color: var(--azul);
+    margin-bottom: 15px;
+}
+
+.recomendacion ul {
+    padding-left: 23px;
+}
+
+.recomendacion li {
+    margin-bottom: 8px;
+}
+
+/* ==================================
+   SECCION OSCURA
+================================== */
+
+.seccion-oscura {
+    background: var(--azul);
+    color: white;
+}
+
+.seccion-oscura h2 {
+    color: white;
+}
+
+.seccion-oscura .descripcion {
+    color: #c5d2e0;
+}
+
+.tarjeta-oscura {
+    background: #1a2c48;
+    border-color: #314761;
+}
+
+.tarjeta-oscura h3 {
+    color: var(--turquesa);
+}
+
+.tarjeta-oscura p {
+    color: #c5d2e0;
+}
+
+.reflexion {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    border: 1px solid #36536d;
+    background: #172945;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.reflexion span {
+    color: var(--turquesa);
+    font-size: 35px;
+}
+
+.reflexion p {
+    color: #e1eaf2;
+    font-style: italic;
+}
+
+/* ==================================
+   TABLA
+================================== */
+
+.tabla-contenedor {
+    overflow-x: auto;
+    margin-top: 25px;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 16px;
+    border: 1px solid #dce5ed;
+    text-align: left;
+}
+
+th {
+    background: var(--azul);
+    color: white;
+}
+
+td {
+    color: #40516a;
+}
+
+tbody tr:nth-child(even) {
+    background: #edf4f7;
+}
+
+/* ==================================
+   RECURSOS
+================================== */
+
+.recursos {
+    background: white;
+}
+
+.recurso {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 23px;
+    border-bottom: 1px solid #e3eaf1;
+}
+
+.recurso .icono {
+    min-width: 45px;
+    text-align: center;
+}
+
+.recurso h3 {
+    color: var(--azul);
+}
+
+.recurso p {
+    color: var(--gris);
+    margin: 5px 0;
+}
+
+.recurso a {
+    color: #078d87;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.recurso a:hover {
+    text-decoration: underline;
+}
+
+/* ==================================
+   FORMULARIO
+================================== */
+
+.seccion-contacto {
+    background: #edf5f8;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 550px;
+    margin-top: 25px;
+}
+
+form label {
+    font-weight: bold;
+    color: var(--azul);
+}
+
+input, textarea {
+    padding: 14px;
+    border: 1px solid #cbd7e2;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background: white;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid var(--turquesa);
+    border-color: transparent;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    background: #087e83;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--azul);
+}
+
+.nota {
+    color: var(--gris);
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* ==================================
+   PIE DE PAGINA
+================================== */
+
+footer {
+    text-align: center;
+    background: var(--azul);
+    color: #c5d2e0;
+    padding: 30px 15px;
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.copyright {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* ==================================
+   ADAPTACION A CELULARES
+================================== */
+
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu ul {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .portada {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .portada h1 {
+        font-size: 32px;
+    }
+
+    .imagen-portada {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .introduccion {
+        padding: 50px 7%;
+    }
+
+    .introduccion h2,
+    .seccion h2 {
+        font-size: 25px;
+    }
+
+    .seccion {
+        padding: 50px 6%;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .recurso {
+        padding: 18px 5px;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .menu ul {
+        gap: 9px;
+    }
+
+    .menu ul a {
+        font-size: 12px;
+    }
+
+    .portada h1 {
+        font-size: 28px;
+    }
+}
